@@ -13,7 +13,7 @@ angular.module('angular-preload-image').directive('preloadImage', ['preLoader', 
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            var url = attrs.ngSrc;
+            var url = attrs.primarySrc;
             scope.default = attrs.defaultImage || "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEWEygNWiLqlwAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAMSURBVAjXY/j//z8ABf4C/tzMWecAAAAASUVORK5CYII=";
             attrs.$set('src', scope.default);
             preLoader(url, function(){
