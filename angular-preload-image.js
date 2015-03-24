@@ -7,7 +7,7 @@ angular.module('angular-preload-image').factory('preLoader', function(){
         }).bind('error', function(){
             errorCallback();
         }).attr('src', url);
-    }
+    };
 });
 angular.module('angular-preload-image').directive('preloadImage', ['preLoader', function(preLoader){
     return {
@@ -19,7 +19,7 @@ angular.module('angular-preload-image').directive('preloadImage', ['preLoader', 
             preLoader(url, function(){
                 attrs.$set('src', url);
             }, function(){
-                if (attrs.fallbackImage != undefined) {
+                if (attrs.fallbackImage !== undefined) {
                     attrs.$set('src', attrs.fallbackImage);
                 }
             });
@@ -30,7 +30,7 @@ angular.module('angular-preload-image').directive('preloadBgImage', ['preLoader'
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            if (attrs.preloadBgImage != undefined) {
+            if (attrs.preloadBgImage !== undefined) {
                 //Define default image
                 scope.default = attrs.defaultImage || "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEWEygNWiLqlwAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAMSURBVAjXY/j//z8ABf4C/tzMWecAAAAASUVORK5CYII=";
                 element.css({
@@ -41,7 +41,7 @@ angular.module('angular-preload-image').directive('preloadBgImage', ['preLoader'
                         'background-image': 'url("' + attrs.preloadBgImage + '")'
                     });
                 }, function(){
-                    if (attrs.fallbackImage != undefined) {
+                    if (attrs.fallbackImage !== undefined) {
                         element.css({
                             'background-image': 'url("' + attrs.fallbackImage + '")'
                         });
