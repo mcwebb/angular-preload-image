@@ -6,9 +6,7 @@ A simple AngularJS module to make it easy to pre-load images to prevent the horr
 
 ##Install with bower
 
-```
-bower install angular-preload-image
-```
+This repo is not in the Bower registry since it's a fork, but you can still pull this github url directly with bower.
 
 ##Include script files
 
@@ -34,7 +32,7 @@ angular.module('app', ['angular-preload-image']);
 ##Pre-load standard images
 
 ```html
-<img preload-image ng-src="[URL]" default-image="[URL]" fallback-image="[URL]" />
+<img preload-image primary-src="[URL]" default-image="[URL]" fallback-image="[URL]" />
 ```
 
 #Licence
@@ -49,7 +47,7 @@ Check out the [demo](http://revillweb.github.io/angular-preload-image/) for an e
 
 * Ability to know when all pre-loaded images have finished loading within the page
 * Extensive cross browser and device testing + fixes
- 
+
 #Credit
 
 Inspiration taken from Ben Nadel's [post](http://www.bennadel.com/blog/2597-preloading-images-in-angularjs-with-promises.htm) about pre-loading images.
