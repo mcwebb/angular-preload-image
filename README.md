@@ -8,6 +8,12 @@ A simple AngularJS module to make it easy to pre-load images to prevent the horr
 
 This repo is not in the Bower registry since it's a fork, but you can still pull this github url directly with bower.
 
+```json
+  "dependencies": {
+    "angular-preload-image": "git@github.com:mcwebb/angular-preload-image.git"
+  }
+```
+
 ##Include script files
 
 ```html
