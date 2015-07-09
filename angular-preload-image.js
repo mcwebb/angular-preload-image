@@ -14,6 +14,7 @@ angular.module('angular-preload-image').directive('preloadImage', ['preLoader', 
         restrict: 'A',
         link: function(scope, element, attrs) {
             attrs.$observe('primarySrc', function (url) {
+                if (!url) return;
                 preLoader(url, function(){
                     attrs.$set('src', url);
                 }, function(){
