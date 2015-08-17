@@ -27,8 +27,10 @@ angular.module('angular-preload-image').directive('preloadImage', ['preLoader', 
                     attrs.$set('src', loadingImage);
                 }
                 preLoader(url, function () {
+                    scope.$emit('image:load:success', url);
                     attrs.$set('src', url);
                 }, function () {
+                    scope.$emit('image:load:fail', url);
                     if (attrs.fallbackImage !== undefined) {
                         attrs.$set('src', attrs.fallbackImage);
                     }
